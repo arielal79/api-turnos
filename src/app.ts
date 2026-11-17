@@ -2,6 +2,7 @@ import express from "express";
 import authRoutes from "./components/auth/auth.routes";
 import { logger } from "./middlewares/logger.middleware";
 import { errorHandler, notFound } from "./middlewares/error.middleware";
+import { authenticate, authorize } from "./middlewares/auth.middleware";
 
 export const app = express();
 

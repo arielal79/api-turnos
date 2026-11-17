@@ -9,6 +9,7 @@ const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
 
 function generarToken(id: string, rol: Rol): string {
   return jwt.sign({ rol }, env.jwtSecret, {
+    subject: id,
     expiresIn: env.jwtExpiresIn as SignOptions["expiresIn"],
   });
 }
