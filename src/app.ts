@@ -1,4 +1,5 @@
 import express from "express";
+import authRoutes from "./components/auth/auth.routes";
 import { logger } from "./middlewares/logger.middleware";
 import { errorHandler, notFound } from "./middlewares/error.middleware";
 
@@ -11,7 +12,7 @@ app.get("/api/health", (_req, res) => {
   res.status(200).json({ status: "ok" });
 });
 
-//Acá irán las rutas de auth y turnos
+app.use("/api/auth", authRoutes);
 
 app.use(notFound); //si nada ccoincidio → 404
-app.use(errorHandler); // siempre al finals
+app.use(errorHandler); // siempre al final
