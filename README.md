@@ -203,6 +203,6 @@ Por seguridad, el registro no permite elegir el rol. Para crear un administrador
 
 ## Pruebas con Thunder Client
 
-- La colección está en `docs/api-turnos.json`. Para usarla: Thunder Client → _Collections_ → `⋯` → _Import_.
-- Antes de ejecutarla, crear en la pestaña _Env_ las variables `baseUrl` (`http://localhost:3000`), `tokenAna`, `tokenLuis`, `tokenAdmin` y `turnoId`, y completar los tokens con los que devuelve el login de cada usuario.
-- Las capturas de cada endpoint, incluidos los casos de error (400, 401, 404), están en `docs/capturas/`.
+Las capturas de cada endpoint, incluidos los casos de error (400, 401, 404),
+están en `docs/capturas/`. Los archivos están numerados y el nombre indica el
+código de estado de cada respuesta.
