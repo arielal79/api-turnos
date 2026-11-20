@@ -3,6 +3,7 @@ import authRoutes from "./components/auth/auth.routes";
 import { logger } from "./middlewares/logger.middleware";
 import { errorHandler, notFound } from "./middlewares/error.middleware";
 import { authenticate, authorize } from "./middlewares/auth.middleware";
+import turnoRoutes from "./components/turno/turno.routes";
 
 export const app = express();
 
@@ -14,6 +15,7 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/turnos", turnoRoutes); // ← nueva
 
 app.use(notFound); //si nada ccoincidio → 404
 app.use(errorHandler); // siempre al final
